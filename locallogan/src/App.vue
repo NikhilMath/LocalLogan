@@ -2,7 +2,7 @@
   <div class="m-8" id="app">
 		<img src="./assets/black.png" style="margin: 0 auto;" alt="LocalLogan Logo" width="150">
 		<h1 class="text-center">Hey there! We're under construction - but will be back soon with some great new features to improve the qualify of life for the citizens of Logan and the greater Cache Valley area.</h1>
-		<h5 class="text-center mt-4">Questions? <a href="mailto:fssflsjfs@gmaifsdfsdl.commmmmm">Email us</a>!</h5>
+		<h5 class="text-center mt-4">Questions? <a href="mailto:erulemath@gmail.com">Email us</a>!</h5>
 		<!-- <Navbar></Navbar> -->
 		<!-- <router-view></router-view> -->
   </div>
