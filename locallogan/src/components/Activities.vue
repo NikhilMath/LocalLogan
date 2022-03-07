@@ -1,15 +1,14 @@
 <template>
 <div>
-	<h1>Home Page</h1>
+	<h1>Activities</h1>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Activities',
 	created() {
-		// Sets HTML Title tag
-		document.title = "Home - LocalLogan";
+		document.title = "Activities - LocalLogan";
 	}
 }
 </script>
