@@ -25,6 +25,9 @@ export default {
 		return {
 			msg: "I'm centered"
 		}
+	},
+	mounted() {
+		document.title = 'LocalLogan - Home';
 	}
 }
 </script>
