@@ -1,5 +1,5 @@
 <template>
-	<h1 class="bg-primary">Hello world!!</h1>
+	<h1 class="bg-primary">Hello world!!!</h1>
 </template>
 
 <script>
