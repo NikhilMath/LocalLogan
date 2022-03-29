@@ -38,9 +38,6 @@ export default {
 .nav>.links-container {
 	padding: 1rem;
 }
-.nav>.links-container>ul {
-	margin-top: 1rem;
-}
 .nav>.links-container>ul>li>a {
 	color: black;
 	text-decoration: none;
