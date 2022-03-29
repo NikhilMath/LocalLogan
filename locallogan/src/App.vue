@@ -1,11 +1,16 @@
 <template>
-  <div id="app">
-		<Navbar></Navbar>
-		<section class="hero">
-			<h1>Local</h1>
-			<h1 class="ml-20">Logan</h1>
-		</section>
-  </div>
+	<div>
+		<div id="app">
+			<Navbar></Navbar>
+			<section class="hero">
+				<h1>Local</h1>
+				<h1 class="ml-20">Logan</h1>
+			</section>
+		</div>
+		<div class="footer">
+			<h4>Contact us - </h4>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -59,5 +64,10 @@ export default {
 .hero>h1 {
 	font-size: 6rem;
 	padding-left: 40px;
+}
+
+.footer {
+	background-color: #49723F;
+	height: 100%;
 }
 </style>
