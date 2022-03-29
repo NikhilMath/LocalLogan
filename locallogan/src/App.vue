@@ -70,4 +70,14 @@ export default {
 	background-color: #49723F;
 	height: 100%;
 }
+
+@media only screen and (max-width: 1024px) {
+	.hero {
+		max-width: 500px;
+		height: 200px;
+	}
+	.hero>h1 {
+		font-size: 4rem;
+	}	
+}
 </style>
