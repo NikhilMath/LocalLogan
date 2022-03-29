@@ -51,4 +51,18 @@ export default {
 	transform: translateY(-2px);
 	transition: 0.4s all;
 }
+@media only screen and (max-width: 1024px) {
+	.links-container>ul {
+		gap: 1rem !important;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.logo-container {
+		margin: 0 auto;
+	}
+	.links-container {
+		margin: 0 auto;
+	}
+}
 </style>
