@@ -5,8 +5,8 @@
 			</div>
 			<div class="links-container">
 				<ul class="flex gap-4">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Coming Soon</a></li>
+					<li><router-link to="/" class="router-link">Home</router-link></li>
+					<li><router-link to="/restaurants" class="router-link">Restaurants</router-link></li>
 					<!-- Contact, About Us, Our Team, etc. -->
 					<li><a href="#">Coming Soon</a></li>
 					<li><a href="#">Coming Soon</a></li>
@@ -39,6 +39,12 @@ export default {
 	padding: 1rem;
 }
 .nav>.links-container>ul>li>a {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.4s all;
+}
+.nav>.links-container>ul>li>a>.router-link {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
