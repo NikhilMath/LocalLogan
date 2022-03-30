@@ -1,12 +1,18 @@
 <template>
-<div>
-	
-</div>
+	<div>
+		<Navbar></Navbar>
+		<h1>Under construction!</h1>
+	</div>
 </template>
 
 <script>
+import Navbar from './Navbar.vue'
+
 export default {
   name: 'Restaurants',
+	components: {
+		Navbar
+	},
 }
 </script>
 
