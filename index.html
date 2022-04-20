@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/styles.css">
   <title>Local Logan | Home</title>
 </head>
 
-<body class="bg-orange-600">
+<body class="bg-orange-800 dark:bg-slate-900">
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #111211;">
     <div class="container-fluid">
@@ -67,18 +67,21 @@
   <!-- MAIN SECTION -->
   <section>
     <div class="container text-light">
+      <input type="checkbox" name="" id="toggle" class="hidden">
+      <label for="toggle"></label>
+      <div class="w-9 h-5 flex items-center bg-orange-300 rounded-full p-1">
+        <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"></div>
+      </div>
       <div class="text-center mt-5">
         <h1 class="display-1 mb-4">Welcome to Local Logan</h1>
-        <p class="lead text-center d-inline">A website detiticated to show off everything good about Logan, Utah</p>
-        <small> and the greater county of Cache Valley</small>
+        <p class="lead text-center d-inline">This website has dark / light mode. It uses your systems preferences</p>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="navbar fixed-bottom navbar-dark" style="background-color: #111211;">
-    <div class="container-fluid p-2">
-    </div>
+    <div class="container-fluid p-2 text-center  text-orange-800 dark:text-white">This website has dark / light mode. It uses your systems preferences</div>
   </footer>
 
   <!-- SCRIPTS -->
