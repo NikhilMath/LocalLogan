@@ -1,0 +1,27 @@
+body {
+	/* background-color: #8abfe0 !important; */
+}
+
+nav a img {
+	width: 50px;
+	height: auto;
+}
+
+.personPic {
+	box-shadow:  0 4px 8px 0 rgba(255, 255, 255, 0.262), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 15rem;
+}
+
+#margin {
+  margin-bottom: 15rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* 
+#endLogo {
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 100px;
+ */

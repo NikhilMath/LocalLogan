@@ -1,18 +1,10 @@
-# LocalLogan
+**Version 1.3.8**
 
-This web project is dedicated to making Logan, Utah and Cache Valley area a better place for everyone.
+# LocalLogan.com
 
-What you can expect to find here:
-- Local date ideas
-- News from around Cache Valley
-- Restauraunt picker
-- And more features our team is working to add! Any feature requests are welcomed and greatly appreciated!
+GitHub repo for a website that is dedicated to the hometown of Logan, UT (and the greater county)
+---
+## Contributors
 
-## Our team
-Name | Position
-------------- | -------------
-Nikhil Math  | Developer
-Austin Thornley | Developer
-Forrest Olson | Developer
-
-![LocalLogan Logo](src/assets/black.png)
+Nikhil Math
+Forrest Olson
