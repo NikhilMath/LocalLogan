@@ -8,3 +8,4 @@ GitHub repo for a website that is dedicated to the hometown of Logan, UT (and th
 
 Nikhil Math
 Forrest Olson
+Austin Thornley
