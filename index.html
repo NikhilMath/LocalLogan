@@ -1,97 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <script>
+      let isDark =
+        localStorage.theme === "dark" ||
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      // console.log("HERE", isDark, localStorage.theme);
+      if (!isDark) {
+        // console.log("@");
+        // console.log(document.documentElement);
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        // console.log("1");
+        // console.log(document.documentElement);
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/styles.css">
-  <title>Local Logan | Home</title>
-</head>
+      function darkModeToggle() {
+        let isDark = localStorage.theme === "dark";
+        console.log("HERE", isDark, localStorage.theme);
+        if (isDark) {
+          // console.log("@");
+          // console.log(document.documentElement);
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          // console.log("1");
+          // console.log(document.documentElement);
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+        // Whenever the user explicitly chooses light mode localStorage.theme = 'light'
+        // Whenever the user explicitly chooses dark mode localStorage.theme = 'dark'
+        // Whenever the user explicitly chooses to respect the OS preference
+        // localStorage.removeItem("theme");
+        // localStorage.setItem("theme", "dark");
+      }
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Local Logan | Home</title>
+  </head>
 
-<body class="bg-orange-800 dark:bg-slate-900">
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #111211;">
-    <div class="container-fluid">
-      <a class="navbar-brand active" href="/index.html" aria-current="page">Local Logan
-        <img src="/images/white.png" alt="Home">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Activies</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-center" href="/Activies/indoorActivities.html">Indoor</a></li>
-              <li><a class="dropdown-item text-center" href="/Activies/outdoorActivities.html">Outdoors</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-center" href="/Activies/specialEvents.html">Special Events Calendar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/RestaurantPicker/restaurantPicker.html" aria-disabled="false">Restaurant
-              Picker</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/LocalLinks/mainpage.html" tabindex="0" aria-disabled="false">Local Links</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Politics</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Housing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Date Ideas</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item mr-auto">
-            <a class="nav-link" href="/creators.html" aria-disabled="false">Creators</a>
-          </li>
-        </ul>
+  <body class="bg-orange-800 dark:bg-slate-900">
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #111211"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand active" href="/index.html" aria-current="page"
+          >Local Logan
+          <img src="/images/white.png" alt="Home" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Activies</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item text-center"
+                    href="/Activies/indoorActivities.html"
+                    >Indoor</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-center"
+                    href="/Activies/outdoorActivities.html"
+                    >Outdoors</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-center"
+                    href="/Activies/specialEvents.html"
+                    >Special Events Calendar</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/RestaurantPicker/restaurantPicker.html"
+                aria-disabled="false"
+                >Restaurant Picker</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/LocalLinks/mainpage.html"
+                tabindex="0"
+                aria-disabled="false"
+                >Local Links</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Politics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Housing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Date Ideas</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item mr-auto">
+              <a class="nav-link" href="/creators.html" aria-disabled="false"
+                >Creators</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- MAIN SECTION -->
-  <section>
-    <div class="container text-light">
-      <input type="checkbox" name="" id="toggle" class="hidden">
-      <label for="toggle"></label>
-      <div class="w-9 h-5 flex items-center bg-orange-300 rounded-full p-1">
-        <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"></div>
+    <!-- MAIN SECTION -->
+    <section>
+      <div class="container text-light">
+        <input type="checkbox" name="" id="toggle" onclick="darkModeToggle()" />
+        <label for="toggle"></label>
+        <!-- <div class="w-9 h-5 flex items-center bg-orange-300 rounded-full p-1">
+          <div
+            class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"
+          ></div>
+        </div> -->
+        <div class="text-center mt-5">
+          <h1 class="display-1 mb-4">Welcome to Local Logan</h1>
+          <p class="lead text-center d-inline">
+            This website has dark / light mode. It uses your systems preferences
+          </p>
+        </div>
       </div>
-      <div class="text-center mt-5">
-        <h1 class="display-1 mb-4">Welcome to Local Logan</h1>
-        <p class="lead text-center d-inline">This website has dark / light mode. It uses your systems preferences</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="navbar fixed-bottom navbar-dark"
+      style="background-color: #111211"
+    >
+      <div
+        class="container-fluid p-2 text-center text-orange-800 dark:text-white"
+      >
+        This website has dark / light mode. It uses your systems preferences
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="navbar fixed-bottom navbar-dark" style="background-color: #111211;">
-    <div class="container-fluid p-2 text-center  text-orange-800 dark:text-white">This website has dark / light mode. It uses your systems preferences</div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-  <script src="app.js"></script>
-  <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <!-- SCRIPTS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   <script type="module" src="RestaurantPicker.js"></script> -->
-</body>
-
+  </body>
 </html>
