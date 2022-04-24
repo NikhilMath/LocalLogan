@@ -9,6 +9,7 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,6 +22,9 @@
               "dark-orange": "#954012",
               "navy-ish": "#162129",
               "white-ish": "#f5efec",
+            },
+            fontFamily: {
+              sans: ["Inter var"],
             },
           },
         },
@@ -68,7 +72,7 @@
     <title>Local Logan | Home</title>
   </head>
 
-  <body class="bg-light-orange dark:bg-slate-900">
+  <body class="bg-light-orange dark:bg-slate-900 text-white-ish">
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg navbar-dark"
@@ -186,8 +190,8 @@
     </nav>
 
     <!-- MAIN SECTION -->
-    <section>
-      <div class="container text-light">
+    <section class="container">
+      <div class="container min-h-screen">
         <input type="checkbox" name="" id="toggle" onclick="darkModeToggle()" />
         <label for="toggle"></label>
         <!-- <div class="w-9 h-5 flex items-center bg-orange-300 rounded-full p-1">
@@ -195,9 +199,7 @@
             class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"
           ></div>
         </div> -->
-        <div
-          class="p-6 max-w-sm mx-auto rounded-xl shadow-lg flex-col items-center space-x-4 text-center"
-        >
+        <div class="flex-col items-center text-center align-middle">
           <div class="text-xl">Local Logan</div>
           <div class="">Your one-stop shop for everthing local</div>
           <div class="">Updated Weekly</div>
@@ -210,7 +212,7 @@
 
     <!-- FOOTER -->
     <footer
-      class="navbar fixed-bottom navbar-dark"
+      class="navbar absolute bottom-0 navbar-dark"
       style="background-color: #111211"
     >
       <div

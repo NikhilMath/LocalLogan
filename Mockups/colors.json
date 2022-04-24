@@ -1,6 +1,9 @@
 {
-  "light-orange": "#b6552b",
-  "dark-orange": "#954012",
-  "navyish": "#162129",
-  "whitish": "#f5efec"
+  "color": {
+    "light-orange": "#b6552b",
+    "dark-orange": "#954012",
+    "navyish": "#162129",
+    "whitish": "#f5efec"
+  },
+  "fonts": {}
 }
