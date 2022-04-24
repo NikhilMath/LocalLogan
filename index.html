@@ -14,6 +14,16 @@
     <script>
       tailwind.config = {
         darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "light-orange": "#b6552b",
+              "dark-orange": "#954012",
+              "navy-ish": "#162129",
+              "white-ish": "#f5efec",
+            },
+          },
+        },
       };
     </script>
     <script>
@@ -58,7 +68,7 @@
     <title>Local Logan | Home</title>
   </head>
 
-  <body class="bg-orange-800 dark:bg-slate-900">
+  <body class="bg-light-orange dark:bg-slate-900">
     <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg navbar-dark"
@@ -185,11 +195,15 @@
             class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"
           ></div>
         </div> -->
-        <div class="text-center mt-5">
-          <h1 class="display-1 mb-4">Welcome to Local Logan</h1>
-          <p class="lead text-center d-inline">
+        <div
+          class="p-6 max-w-sm mx-auto rounded-xl shadow-lg flex-col items-center space-x-4 text-center"
+        >
+          <div class="text-xl">Local Logan</div>
+          <div class="">Your one-stop shop for everthing local</div>
+          <div class="">Updated Weekly</div>
+          <div class="">
             This website has dark / light mode. It uses your systems preferences
-          </p>
+          </div>
         </div>
       </div>
     </section>
