@@ -5,5 +5,7 @@
     "navyish": "#162129",
     "whitish": "#f5efec"
   },
-  "fonts": {}
+  "fonts": {
+    "sans": ["Inter var"]
+  }
 }

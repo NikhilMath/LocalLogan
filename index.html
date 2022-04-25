@@ -12,225 +12,178 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "light-orange": "#b6552b",
-              "dark-orange": "#954012",
-              "navy-ish": "#162129",
-              "white-ish": "#f5efec",
-            },
-            fontFamily: {
-              sans: ["Inter var"],
-            },
-          },
-        },
-      };
-    </script>
-    <script>
-      let isDark =
-        localStorage.theme === "dark" ||
-        window.matchMedia("(prefers-color-scheme: dark)").matches;
-      // console.log("HERE", isDark, localStorage.theme);
-      if (!isDark) {
-        // console.log("@");
-        // console.log(document.documentElement);
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      } else {
-        // console.log("1");
-        // console.log(document.documentElement);
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      }
-
-      function darkModeToggle() {
-        let isDark = localStorage.theme === "dark";
-        console.log("HERE", isDark, localStorage.theme);
-        if (isDark) {
-          // console.log("@");
-          // console.log(document.documentElement);
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-        } else {
-          // console.log("1");
-          // console.log(document.documentElement);
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("theme", "dark");
-        }
-        // Whenever the user explicitly chooses light mode localStorage.theme = 'light'
-        // Whenever the user explicitly chooses dark mode localStorage.theme = 'dark'
-        // Whenever the user explicitly chooses to respect the OS preference
-        // localStorage.removeItem("theme");
-        // localStorage.setItem("theme", "dark");
-      }
-    </script>
-    <link rel="stylesheet" href="/styles.css" />
-    <title>Local Logan | Home</title>
-  </head>
-
-  <body class="bg-light-orange dark:bg-slate-900 text-white-ish">
-    <!-- NAVBAR -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background-color: #111211"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand active" href="/index.html" aria-current="page"
-          >Local Logan
-          <img src="/images/white.png" alt="Home" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Activies</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item text-center"
-                    href="/Activies/indoorActivities.html"
-                    >Indoor</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item text-center"
-                    href="/Activies/outdoorActivities.html"
-                    >Outdoors</a
-                  >
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item text-center"
-                    href="/Activies/specialEvents.html"
-                    >Special Events Calendar</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/RestaurantPicker/restaurantPicker.html"
-                aria-disabled="false"
-                >Restaurant Picker</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="/LocalLinks/mainpage.html"
-                tabindex="0"
-                aria-disabled="false"
-                >Local Links</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Politics</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Housing</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Date Ideas</a
-              >
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item mr-auto">
-              <a class="nav-link" href="/creators.html" aria-disabled="false"
-                >Creators</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- MAIN SECTION -->
-    <section class="container">
-      <div class="container min-h-screen">
-        <input type="checkbox" name="" id="toggle" onclick="darkModeToggle()" />
-        <label for="toggle"></label>
-        <!-- <div class="w-9 h-5 flex items-center bg-orange-300 rounded-full p-1">
-          <div
-            class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"
-          ></div>
-        </div> -->
-        <div class="flex-col items-center text-center align-middle">
-          <div class="text-xl">Local Logan</div>
-          <div class="">Your one-stop shop for everthing local</div>
-          <div class="">Updated Weekly</div>
-          <div class="">
-            This website has dark / light mode. It uses your systems preferences
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer
-      class="navbar absolute bottom-0 navbar-dark"
-      style="background-color: #111211"
-    >
-      <div
-        class="container-fluid p-2 text-center text-orange-800 dark:text-white"
-      >
-        This website has dark / light mode. It uses your systems preferences
-      </div>
-    </footer>
-
+    <script src="./tailwind.config.js"></script>
+    <script src="./index.js"></script>
     <!-- SCRIPTS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
+      defer
     ></script>
-    <script src="app.js"></script>
-    <!-- <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script type="module" src="RestaurantPicker.js"></script> -->
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Local Logan | Home</title>
+  </head>
+
+  <body
+    class="bg-light-orange dark:bg-slate-900 text-white-ish flex flex-col h-screen justify-between box-border"
+  >
+    <!-- HEADER -->
+    <header class="h-20 bg-dark-orange flex">
+      <a
+        class="navbar-brand active pl-10"
+        href="/index.html"
+        aria-current="page"
+      >
+        <img class="w-16 h-16" src="/images/white.png" alt="Home" />
+      </a>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Activies</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item text-center"
+                      href="/Activies/indoorActivities.html"
+                      >Indoor</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-center"
+                      href="/Activies/outdoorActivities.html"
+                      >Outdoors</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-center"
+                      href="/Activies/specialEvents.html"
+                      >Special Events Calendar</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/RestaurantPicker/restaurantPicker.html"
+                  aria-disabled="false"
+                  >Restaurant Picker</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="/LocalLinks/mainpage.html"
+                  tabindex="0"
+                  aria-disabled="false"
+                  >Local Links</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Politics</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Housing</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Date Ideas</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item mr-auto">
+                <a class="nav-link" href="/creators.html" aria-disabled="false"
+                  >Creators</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="flex flex-col justify-between h-screen py-2">
+      <div class="flex-1 shrink"></div>
+      <div
+        class="basis-1/2 flex flex-col flex-grow items-center text-center align-middle"
+      >
+        <div class="text-9xl font-semibold mb-8 text-shadow-lg">
+          Local Logan
+        </div>
+        <div class="text-3xl mb-4">Your one-stop shop for everthing local</div>
+        <div class="text-sm">Updated Weekly</div>
+        <div class="text-sm">
+          This website has dark / light mode. It default to your systems
+          preferences but you can toggle here:
+          <input
+            class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform"
+            type="checkbox"
+            name=""
+            id="toggle"
+            onclick="darkModeToggle()"
+          />
+          <label for="toggle"></label>
+        </div>
+      </div>
+      <nav class="social-media-links flex justify-center space-x-4">
+        <img src="./images/facebook.png" class="w-10 h-10" />
+        <!-- <img src="./images/messenger.svg" /> -->
+        <img src="./images/instagram.png" class="w-10 h-10" />
+        <img src="./images/twitter.png" class="w-10 h-10" />
+      </nav>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="h-10 flex justify-between items-center bg-navy-ish p-3">
+      <div class="flex-1"></div>
+      <div class="">© by LocalLogan.com</div>
+      <a class="flex-1 text-right" href="./creators.html">Creators</a>
+    </footer>
   </body>
 </html>
