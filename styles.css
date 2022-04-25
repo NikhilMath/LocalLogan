@@ -1,15 +1,32 @@
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-md {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}
+
 body {
-	/* background-color: #8abfe0 !important; */
+  /* background-color: #8abfe0 !important; */
 }
 
 nav a img {
-	width: 50px;
-	height: auto;
+  width: 50px;
+  height: auto;
 }
 
 .personPic {
-	box-shadow:  0 4px 8px 0 rgba(255, 255, 255, 0.262), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	width: 15rem;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.262),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 15rem;
 }
 
 #margin {
@@ -26,6 +43,6 @@ ul {
 	width: 100px;
  */
 
- #toggle:checked ~ label div.toggle-dot {
-	 @apply translate-x-2
- }
+#toggle:checked ~ label div.toggle-dot {
+  @apply translate-x-2;
+}
