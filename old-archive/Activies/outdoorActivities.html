@@ -1,158 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Local Logan</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <title>Local Logan</title>
-</head>
-
-<body class="bg-dark">
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand active" href="/index.html">Local Logan
-        <img src="/images/white.png" alt="Home">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Activies</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-center" href="/Activies/indoorActivities.html">Indoor</a></li>
-              <li><a class="dropdown-item text-center active" href="/Activies/outdoorActivities.html"
-                  aria-current="page">Outdoors</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-center" href="/Activies/specialEvents.html">Special Events Calendar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/RestaurantPicker/restaurantPicker.html" aria-disabled="false">Restaurant Picker</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/LocalLinks/mainpage.html" tabindex="0" aria-disabled="false">Local Links</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Politics</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Housing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Date Ideas</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item mr-auto">
-            <a class="nav-link" href="/creators.html" aria-disabled="false">Creators</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MAIN SECTION -->
-  <section class="container text-light">
-    <h1 class="display-2 text-center mt-4">Outdoor Activities</h1>
-    <p class="lead text-center sticky-top bg-dark py-3">Click the images to learn more</p>
-    <div class="row row-cols-1 row-cols-md-3 g-5">
-      <div class="col">
-        <div class="card h-100 border-light">
-          <a href="/Activies/outdoorActivies/rentals.html">
-            <img
-              src="https://images.unsplash.com/photo-1590986201364-ce95ab280ca2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              class="card-img-top" alt="...">
-          </a>
-          <div class="card-body bg-dark">
-            <h5 class="card-title text-center">Rentals</h5>
-            <p class="card-text">Where to find rentals for all your outdoor activies!</p>
-          </div>
+  <body class="bg-dark">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand active" href="/index.html"
+          >Local Logan
+          <img src="./assets/images/white.png" alt="Home" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Activies</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a
+                    class="dropdown-item text-center"
+                    href="/Activies/indoorActivities.html"
+                    >Indoor</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-center active"
+                    href="/Activies/outdoorActivities.html"
+                    aria-current="page"
+                    >Outdoors</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-center"
+                    href="/Activies/specialEvents.html"
+                    >Special Events Calendar</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/RestaurantPicker/restaurantPicker.html"
+                aria-disabled="false"
+                >Restaurant Picker</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="/LocalLinks/mainpage.html"
+                tabindex="0"
+                aria-disabled="false"
+                >Local Links</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Politics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Housing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Date Ideas</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item mr-auto">
+              <a class="nav-link" href="/creators.html" aria-disabled="false"
+                >Creators</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100 bg-dark border-light">
-          <a href="/Activies/outdoorActivies/skiing.html">
-            <img
-              src="https://images.unsplash.com/photo-1586356415056-bd7a5c2bbef7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
-              class="card-img-top" alt="picture of person skiing">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-center">Skiing/Snowboarding</h5>
-            <p class="card-text">Where to go Skiing in Cache Valley.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 bg-dark border-light">
-          <img
-            src="https://images.unsplash.com/photo-1595931288159-8164ae5def72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
-            class="card-img-top" alt="person climbing">
-          <div class="card-body">
-            <h5 class="card-title text-center">Rock Climbing</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional
-              content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 bg-dark border-light">
-          <a href="/Activies/outdoorActivies/hiking.html">
-            <img
-              src="https://images.unsplash.com/photo-1542557284-ed4bd9947bb7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-              class="card-img-top" alt="...">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title text-center">Hikes</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-              additional
-              content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MARGIN -->
-  <div id="margin"></div>
-
-  <!-- FOOTER -->
-  <footer>
-    <nav class="fixed-bottom container bg-dark py-1" aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Outdoor Activies</li>
-      </ol>
     </nav>
-  </footer>
 
-  <!-- SCRIPTS -->
-  <script>
-    $(function () {
-      $("#headerNav-placeholder").load("/headerNav.html");
-    });
-  </script>
-  <script>
-    $(function () {
-      $("#footerNav-placeholder").load("/footerNav.html");
-    });
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-  <script src="app.js"></script>
-</body>
+    <!-- MAIN SECTION -->
+    <section class="container text-light">
+      <h1 class="display-2 text-center mt-4">Outdoor Activities</h1>
+      <p class="lead text-center sticky-top bg-dark py-3">
+        Click the images to learn more
+      </p>
+      <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="col">
+          <div class="card h-100 border-light">
+            <a href="/Activies/outdoorActivies/rentals.html">
+              <img
+                src="https://images.unsplash.com/photo-1590986201364-ce95ab280ca2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="..."
+              />
+            </a>
+            <div class="card-body bg-dark">
+              <h5 class="card-title text-center">Rentals</h5>
+              <p class="card-text">
+                Where to find rentals for all your outdoor activies!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-dark border-light">
+            <a href="/Activies/outdoorActivies/skiing.html">
+              <img
+                src="https://images.unsplash.com/photo-1586356415056-bd7a5c2bbef7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
+                class="card-img-top"
+                alt="picture of person skiing"
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">Skiing/Snowboarding</h5>
+              <p class="card-text">Where to go Skiing in Cache Valley.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-dark border-light">
+            <img
+              src="https://images.unsplash.com/photo-1595931288159-8164ae5def72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80"
+              class="card-img-top"
+              alt="person climbing"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Rock Climbing</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 bg-dark border-light">
+            <a href="/Activies/outdoorActivies/hiking.html">
+              <img
+                src="https://images.unsplash.com/photo-1542557284-ed4bd9947bb7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="..."
+              />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title text-center">Hikes</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- MARGIN -->
+    <div id="margin"></div>
+
+    <!-- FOOTER -->
+    <footer>
+      <nav class="fixed-bottom container bg-dark py-1" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Outdoor Activies
+          </li>
+        </ol>
+      </nav>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+      $(function () {
+        $("#headerNav-placeholder").load("/headerNav.html");
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#footerNav-placeholder").load("/footerNav.html");
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
 </html>
