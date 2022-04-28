@@ -1,6 +1,6 @@
 **Version 1.3.8**
 
-# LocalLogan.com
+# [LocalLogan.com](https://www.LocalLogan.com)
 
 GitHub repo for a website that is dedicated to the hometown of Logan, UT (and the greater county)
 ---
