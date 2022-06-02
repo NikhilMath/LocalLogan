@@ -82,6 +82,14 @@ class Route {
   }
 }
 
-function route() {
-  var routes = [new Route("Creators", "/creators", "./")];
+function route(name) {
+  var routes = [
+    new Route("Creators", "/creators", "./pages/creators.html"),
+    new Route(
+      "Restaurant Picker",
+      "/restaurant-picker",
+      "./restaurant-picker/restaurant-picker.html"
+    ),
+    // new Route("Creators", "/creators", "./"),
+  ];
 }
