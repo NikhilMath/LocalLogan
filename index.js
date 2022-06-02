@@ -73,3 +73,15 @@ function initialize() {
   //     <a class="flex-1 text-right" href="./creators.html">Creators</a>
   //   </footer>`;
 }
+
+class Route {
+  constructor(name, path, file) {
+    this.name = name;
+    this.path = path;
+    this.file = file;
+  }
+}
+
+function route() {
+  var routes = [new Route("Creators", "/creators", "./")];
+}
