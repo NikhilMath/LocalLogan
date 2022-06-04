@@ -34,62 +34,77 @@ function darkModeToggle() {
   // localStorage.removeItem("theme");
   // localStorage.setItem("theme", "dark");
 }
+function setElementContent(elementId, path) {
+  fetch(path)
+    .then((response) => {
+      // console.log(response);
+      return response.text();
+    })
+    .then((text) => {
+      // console.log(text);
+      var div = document.createElement("div");
+      div.innerHTML = text; //.trim();
+      let newElement = div.firstChild;
+      // console.log(div);
+      document.getElementById(elementId).replaceWith(newElement);
+      // console.log(newElement);
+    });
+}
+
+function setMainContent(path) {
+  console.log(path);
+  setElementContent("main", path);
+}
+function setFooterContent(path) {
+  setElementContent("footer", path);
+}
+function setHeaderContent(path) {
+  setElementContent("header", path);
+}
 
 function initialize() {
-  fetch("./components/header.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
-  fetch("./pages/main.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
-  fetch("./components/footer.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
+  let headerPath = "./components/header.html";
+  // let mainPath = "./pages/main.html";
+  let footerPath = "./components/footer.html";
 
-  // let oldHeader = document.getElementById("footer");
-  // let newHeader = document.createElement("footer");
-  // newHeader.classList =
-  //   "h-10 flex justify-between items-center bg-navy-ish p-3";
-  // newHeader.innerHTML = `<div class="flex-1"></div>
-  //     <div class="">© by LocalLogan.com</div>
-  //     <a class="flex-1 text-right" href="./creators.html">Creators</a>`;
-  // oldHeader.parentNode.replaceChild(newHeader, oldHeader);
-
-  // is this better to all be in a separate file? or just the inner contents?
-
-  // document.getElementById("footer").parentNode.innerHTML += `
-  // <footer
-  //     id="footer"
-  //     class="h-10 flex justify-between items-center bg-navy-ish p-3"
-  //   >
-  //     <div class="flex-1"></div>
-  //     <div class="">© by LocalLogan.com</div>
-  //     <a class="flex-1 text-right" href="./creators.html">Creators</a>
-  //   </footer>`;
+  setHeaderContent(headerPath);
+  // setMainContent(mainPath);
+  setFooterContent(footerPath);
 }
 
 class Route {
-  constructor(name, path, file) {
+  constructor(name, route, filepath) {
     this.name = name;
-    this.path = path;
-    this.file = file;
+    this.route = route;
+    this.filepath = filepath;
   }
 }
 
-function route(name) {
-  var routes = [
-    new Route("Creators", "/creators", "./pages/creators.html"),
-    new Route(
-      "Restaurant Picker",
-      "/restaurant-picker",
-      "./restaurant-picker/restaurant-picker.html"
-    ),
-    // new Route("Creators", "/creators", "./"),
-  ];
+var routes = [
+  new Route("Home", "/", "./pages/main.html"),
+  new Route("Creators", "/creators", "./pages/creators.html"),
+  new Route(
+    "Restaurant Picker",
+    "/restaurant-picker",
+    "./RestaurantPicker/restaurantPicker.html"
+  ),
+  // new Route("Creators", "/creators", "./"),
+];
+
+function route() {
+  var hash = window.location.hash.substring(1).replace(/\//gi, "/");
+  // console.log(window.location);
+  console.log(hash);
+  var route = routes[0];
+  for (let index = 0; index < routes.length; index++) {
+    const potentialRoute = routes[index];
+    if (hash == potentialRoute.route) {
+      route = potentialRoute;
+    }
+  }
+  console.log(route);
+  setMainContent(route.filepath);
 }
+
+window.addEventListener("popstate", route);
+route();
