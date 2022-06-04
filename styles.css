@@ -14,9 +14,9 @@
   text-shadow: none;
 }
 
-body {
-  /* background-color: #8abfe0 !important; */
-}
+/* body { */
+/* background-color: #8abfe0 !important; */
+/* }  */
 
 nav a img {
   width: 50px;
@@ -43,11 +43,46 @@ ul {
 	width: 100px;
  */
 
-#toggle:checked ~ label div.toggle-dot {
+/* #toggle:checked ~ label div.toggle-dot {
   @apply translate-x-2;
 }
 
-
 .h1 {
-  @apply text-7xl lg:text-7xl xl:text-8xl 2xl:text-9xl
+  @apply text-7xl lg:text-7xl xl:text-8xl 2xl:text-9xl;
+} */
+/* (--theme-code-inline-bg) = rgb(23, 22, 29) */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.33em 0.67em;
+  border-radius: 99em;
+  background-color: rgba(149, 64, 18, 0.25);
+}
+/* theme accent = rgb(255, 94, 0) */
+.theme-toggle > label:focus-within {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 0.08em rgb(255, 94, 0), 0 0 0 0.12em #fff;
+}
+/* --theme-code-inline-text =  rgb(23, 22, 29)*/
+.theme-toggle > label {
+  color: rgb(23, 22, 29);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.theme-toggle .checked {
+  color: rgb(255, 94, 0);
+  opacity: 1;
+}
+
+input[name="theme-toggle"] {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  z-index: -1;
 }
