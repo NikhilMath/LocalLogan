@@ -34,23 +34,30 @@ function darkModeToggle() {
   // localStorage.removeItem("theme");
   // localStorage.setItem("theme", "dark");
 }
+function setElementContent(elementId, path) {
+  fetch(path)
+    .then((response) => response.text())
+    .then((text) => document.getElementById(elementId).replaceWith(text));
+}
+
+function setMainContent(path) {
+  setElementContent("main", path);
+}
+function setFooterContent(path) {
+  setElementContent("footer", path);
+}
+function setHeaderContent(path) {
+  setElementContent("header", path);
+}
 
 function initialize() {
-  fetch("./components/header.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
-  fetch("./pages/main.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
-  fetch("./components/footer.html")
-    .then((response) => response.text())
-    .then(
-      (text) => (document.getElementsByTagName("body")[0].innerHTML += text)
-    );
+  let headerPath = "./components/header.html";
+  let mainPath = "./pages/main.html";
+  let footerPath = "./components/footer.html";
+
+  setHeaderContent(headerPath);
+  setMainContent("main", mainPath);
+  setElementContent("footer", footerPath);
 
   // let oldHeader = document.getElementById("footer");
   // let newHeader = document.createElement("footer");
@@ -75,21 +82,35 @@ function initialize() {
 }
 
 class Route {
-  constructor(name, path, file) {
+  constructor(name, route, filepath) {
     this.name = name;
-    this.path = path;
-    this.file = file;
+    this.route = route;
+    this.filepath = filepath;
   }
 }
 
-function route(name) {
-  var routes = [
-    new Route("Creators", "/creators", "./pages/creators.html"),
-    new Route(
-      "Restaurant Picker",
-      "/restaurant-picker",
-      "./restaurant-picker/restaurant-picker.html"
-    ),
-    // new Route("Creators", "/creators", "./"),
-  ];
+var routes = [
+  new Route("Home", "", "./pages/creators.html"),
+  new Route("Creators", "creators", "./pages/creators.html"),
+  new Route(
+    "Restaurant Picker",
+    "restaurant-picker",
+    "./restaurant-picker/restaurant-picker.html"
+  ),
+  // new Route("Creators", "/creators", "./"),
+];
+
+function route() {
+  var hash = window.location.hash.substring(1).replace(/\//gi, "/");
+
+  var route = routes[0];
+  for (let index = 0; index < routes.length; index++) {
+    const potentialRoute = routes[index];
+    if (hash == potentialRoute.route) {
+      route = potentialRoute;
+    }
+  }
+  setMainContent(route.filepath);
 }
+window.addEventListener("popstate", route);
+route();
