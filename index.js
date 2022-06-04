@@ -36,11 +36,23 @@ function darkModeToggle() {
 }
 function setElementContent(elementId, path) {
   fetch(path)
-    .then((response) => response.text())
-    .then((text) => document.getElementById(elementId).replaceWith(text));
+    .then((response) => {
+      // console.log(response);
+      return response.text();
+    })
+    .then((text) => {
+      // console.log(text);
+      var div = document.createElement("div");
+      div.innerHTML = text; //.trim();
+      let newElement = div.firstChild;
+      // console.log(div);
+      document.getElementById(elementId).replaceWith(newElement);
+      // console.log(newElement);
+    });
 }
 
 function setMainContent(path) {
+  console.log(path);
   setElementContent("main", path);
 }
 function setFooterContent(path) {
@@ -52,33 +64,12 @@ function setHeaderContent(path) {
 
 function initialize() {
   let headerPath = "./components/header.html";
-  let mainPath = "./pages/main.html";
+  // let mainPath = "./pages/main.html";
   let footerPath = "./components/footer.html";
 
   setHeaderContent(headerPath);
-  setMainContent("main", mainPath);
-  setElementContent("footer", footerPath);
-
-  // let oldHeader = document.getElementById("footer");
-  // let newHeader = document.createElement("footer");
-  // newHeader.classList =
-  //   "h-10 flex justify-between items-center bg-navy-ish p-3";
-  // newHeader.innerHTML = `<div class="flex-1"></div>
-  //     <div class="">© by LocalLogan.com</div>
-  //     <a class="flex-1 text-right" href="./creators.html">Creators</a>`;
-  // oldHeader.parentNode.replaceChild(newHeader, oldHeader);
-
-  // is this better to all be in a separate file? or just the inner contents?
-
-  // document.getElementById("footer").parentNode.innerHTML += `
-  // <footer
-  //     id="footer"
-  //     class="h-10 flex justify-between items-center bg-navy-ish p-3"
-  //   >
-  //     <div class="flex-1"></div>
-  //     <div class="">© by LocalLogan.com</div>
-  //     <a class="flex-1 text-right" href="./creators.html">Creators</a>
-  //   </footer>`;
+  // setMainContent(mainPath);
+  setFooterContent(footerPath);
 }
 
 class Route {
@@ -90,19 +81,20 @@ class Route {
 }
 
 var routes = [
-  new Route("Home", "", "./pages/creators.html"),
-  new Route("Creators", "creators", "./pages/creators.html"),
+  new Route("Home", "/", "./pages/main.html"),
+  new Route("Creators", "/creators", "./pages/creators.html"),
   new Route(
     "Restaurant Picker",
-    "restaurant-picker",
-    "./restaurant-picker/restaurant-picker.html"
+    "/restaurant-picker",
+    "./RestaurantPicker/restaurantPicker.html"
   ),
   // new Route("Creators", "/creators", "./"),
 ];
 
 function route() {
   var hash = window.location.hash.substring(1).replace(/\//gi, "/");
-
+  // console.log(window.location);
+  console.log(hash);
   var route = routes[0];
   for (let index = 0; index < routes.length; index++) {
     const potentialRoute = routes[index];
@@ -110,7 +102,9 @@ function route() {
       route = potentialRoute;
     }
   }
+  console.log(route);
   setMainContent(route.filepath);
 }
+
 window.addEventListener("popstate", route);
 route();
