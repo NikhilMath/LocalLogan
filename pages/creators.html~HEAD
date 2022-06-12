@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #111211;">
     <div class="container-fluid">
       <a class="navbar-brand active" href="/index.html">Local Logan
-        <img src="/images/white.png" alt="Home">
+        <img src="./lib/images/white.png" alt="Home">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,7 +70,7 @@
     <div class="row mb-4">
       <h3 class="font-monospace display-3 text-center ">Nikhil Math</h3>
       <div class="col-md-6 mt-2 text-center">
-        <img class="personPic rounded-circle align-middle align-self-center" src="images/NikhilPic.jpg" alt="">
+        <img class="personPic rounded-circle align-middle align-self-center" src="./assets/images/NikhilPic.jpg" alt="">
       </div>
       <div class="col-md-6 mt-2 d-grid">
         <h4 class="lead display-5 text-center ">Creator / Web Developer / Editor</h4>
@@ -88,7 +88,7 @@
     <div class="row mb-4">
       <h3 class="font-monospace display-3 text-center ">Forrest Olson</h3>
       <div class="col-md-6 mt-2 text-center">
-        <img class="personPic rounded-circle align-middle align-self-center" src="images/ForrestPic.jpg" alt="">
+        <img class="personPic rounded-circle align-middle align-self-center" src="./assets/images/ForrestPic.jpg" alt="">
       </div>
       <div class="col-md-6 mt-2 d-grid">
         <h4 class="lead display-5 text-center ">Web Developer</h4>
@@ -103,7 +103,7 @@
     <div class="row mb-4">
       <h3 class="font-monospace display-3 text-center ">Austin Thornley</h3>
       <div class="col-md-6 mt-2 text-center">
-        <img class="personPic rounded-circle align-middle align-self-center" src="images/AustinPic.jpeg" alt="">
+        <img class="personPic rounded-circle align-middle align-self-center" src="./assets/images/AustinPic.jpeg" alt="">
       </div>
       <div class="col-md-6 mt-2 d-grid">
         <h4 class="lead display-5 text-center ">Web Developer</h4>
@@ -120,7 +120,7 @@
     <div class="row">
       <h4 class="font-monospace display-4 text-center ">Cheyenne Price</h4>
       <div class="col-md-6 mt-2 text-center">
-        <img class="personPic rounded-circle align-middle" src="images/Cheyenne.jpg" alt="">
+        <img class="personPic rounded-circle align-middle" src="./assets/images/Cheyenne.jpg" alt="">
       </div>
       <div class="col-md-6 mt-2 d-grid ">
         <h5 class="lead display-5 text-center mt-5 ">Writer</h5>
@@ -130,10 +130,23 @@
     <div class="row">
       <h4 class="font-monospace display-4 text-center mt-3 ">Ivie Parkinson</h4>
       <div class="col-md-6 mt-2 text-center">
-        <img class="personPic rounded-circle align-middle" src="images/IviePic.jpg" alt="">
+        <img class="personPic rounded-circle align-middle" src="./assets/images/IviePic.jpg" alt="">
       </div>
       <div class="col-md-6 mt-2 d-grid">
         <p class="lead display-5 text-center mt-5 ">Logo Designer</p>
+      </div>
+    </div>
+    <hr class="">
+    <div class="row mb-4">
+      <h3 class="font-monospace display-3 text-center ">Edwin Zecena</h3>
+      <div class="col-md-6 mt-2 text-center">
+        <img class="personPic rounded-circle align-middle align-self-center" src="images/EdwinPic.jpeg" alt="">
+      </div>
+      <div class="col-md-6 mt-2 d-grid">
+        <h4 class="lead display-5 text-center ">Business Relations</h4>
+        </p>
+        <a target="_blank" class="btn btn-secondary btn-outline-dark text-center"
+          href="https://www.linkedin.com/in/edwin-zecena-894097193/">LinkedIn</a> <br>
       </div>
     </div>
     <!-- <div class="row">
