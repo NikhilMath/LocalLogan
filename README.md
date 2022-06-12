@@ -1,5 +1,3 @@
-**Version 1.3.8**
-
 # [LocalLogan.com](https://www.LocalLogan.com)
 
 
@@ -8,3 +6,7 @@
 [Nikhil Math](https://github.com/NikhilMath) <br>
 [Forrest Olson](https://github.com/bojoki) <br>
 [Austin Thornley](https://github.com/AustinThornley)
+
+---
+###### Release Version
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/NikhilMath/locallogan.com)
