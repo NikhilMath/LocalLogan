@@ -6,6 +6,8 @@
 [Nikhil Math](https://github.com/NikhilMath) <br>
 [Forrest Olson](https://github.com/bojoki) <br>
 [Austin Thornley](https://github.com/AustinThornley)
+[Sheyenne Jones](https://github.com/sheyennejones)
+
 
 ---
 ###### Release Version
