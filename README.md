@@ -5,7 +5,7 @@
 
 [Nikhil Math](https://github.com/NikhilMath) <br>
 [Forrest Olson](https://github.com/bojoki) <br>
-[Austin Thornley](https://github.com/AustinThornley)
+[Austin Thornley](https://github.com/AustinThornley) <br>
 [Sheyenne Jones](https://github.com/sheyennejones)
 
 
