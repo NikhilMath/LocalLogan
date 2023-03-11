@@ -35,6 +35,11 @@
   border: 2px solid black;
   border-radius: 10px;
 }
+ul.navbar-nav.mx-auto li {
+  min-width: 183px;
+  display: flex;
+  justify-content: center;
+}
 /* ------------------------- Bootstrap Media Queries ------------------------ */
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
