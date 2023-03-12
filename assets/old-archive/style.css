@@ -86,3 +86,8 @@ input[name="theme-toggle"] {
   inset: 0;
   z-index: -1;
 }
+
+
+.basis-1\/2.flex.flex-col.flex-grow.items-center.text-center.align-middle {
+  flex-basis: 0%;
+}

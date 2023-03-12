@@ -11,6 +11,22 @@
   }
 }
 /* ------------------------------------ - ----------------------------------- */
+body {
+  background-color: var(--secondary-color) !important;
+}
+
+h1 {
+  font-family: 'Tilt Warp', cursive;
+  font-size: var(--h1-font-size);
+}
+footer .nav-link {
+  font-size: 2rem;
+}
+.footer-page-links {
+width: 15%;
+display: flex;
+justify-content: space-between;
+}
 .navbar-brand img {
   width: 80px;
 }
