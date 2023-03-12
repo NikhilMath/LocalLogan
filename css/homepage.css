@@ -1,11 +1,3 @@
-body {
-  background-color: var(--secondary-color) !important;
-}
-
-h1 {
-  font-family: 'Tilt Warp', cursive;
-  font-size: var(--h1-font-size);
-}
 small.com {
 font-size: .6em;
 }
