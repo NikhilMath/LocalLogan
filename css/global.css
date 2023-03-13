@@ -47,7 +47,7 @@ justify-content: space-between;
     padding: 0 1em;
   }
 }
-.here {
+nav [aria-current="page"] {
   border: 2px solid black;
   border-radius: 10px;
 }
