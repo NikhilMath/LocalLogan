@@ -47,7 +47,8 @@ justify-content: space-between;
     padding: 0 1em;
   }
 }
-.here {
+nav [aria-current="page"] {
+  /* Makes whatever is the current page have a border around it in the navbar */
   border: 2px solid black;
   border-radius: 10px;
 }
