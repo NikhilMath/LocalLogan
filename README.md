@@ -27,7 +27,7 @@ To submit, please make a branch of your own from `master` and then do a pull req
 
 If you have any questions or comments about the project, you can reach out to the creators via Email / LinkedIn.
 
-Nikhil: [Email](mailto:erulemath@gmail.com) / [LinkedIn](https://www.linkedin.com/in/nikhil-math/)
+Nikhil: [Email](mailto:erulemath@gmail.com) / [LinkedIn](https://www.linkedin.com/in/nikhil-math/) / [GitHub](https://github.com/NikhilMath)
 
 ## Acknowledgements
 
