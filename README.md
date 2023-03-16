@@ -15,7 +15,7 @@ A non-profit organization to entertain and help people who live in or around the
 ## Installation
 
 1. Clone the repository.
-2. Since it is all Vanilla and Bootstrap, no need to download any dependencies.
+2. Since it is all Vanilla and Bootstrap 5.3, no need to download any dependencies.
 
 ## Contributing
 
