@@ -16,16 +16,16 @@ body {
 }
 
 h1 {
-  font-family: 'Tilt Warp', cursive;
+  font-family: "Tilt Warp", cursive;
   font-size: var(--h1-font-size);
 }
 footer .nav-link {
   font-size: 2rem;
 }
 .footer-page-links {
-width: 15%;
-display: flex;
-justify-content: space-between;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
 }
 .navbar-brand img {
   width: 80px;
@@ -74,4 +74,9 @@ ul.navbar-nav.mx-auto li {
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 87.5rem) {
+}
+
+.bg-red {
+  background-color: #ff5050 !important;
+  color: #fff !important;
 }
