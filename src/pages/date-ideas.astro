@@ -1,73 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import Layout from "../layouts/Layout.astro";
+---
+<Layout title="Date Ideas">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="assets/images/white.png" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet" />
-  <!-- Bootstrap 5.3 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <!-- LocalLogan.com CSS -->
-  <link rel="stylesheet" href="/css/global.css" />
-  <link rel="stylesheet" href="/css/date-ideas.css" />
-  <!-- Bootstrap 5.3 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <!-- What Nikhil Thinks needs to be done for the google calendar to work, but doesnt work for some reason -->
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/2c23b18a78.js" crossorigin="anonymous"></script>
-  <title>Home | Local Logan</title>
-</head>
-
-<body>
-  <!-- --------------------------- ⬇ - Nav Bar - ⬇ --------------------------- -->
-  <div class="container">
-    <nav class="navbar navbar-expand-md navbar-light">
-      <div class="container-fluid">
-        <a class="navbar-brand d-md-none" href="#">
-          <img src="/assets/images/black.png" alt="Local Logan Logo" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link here" href="/">Event Calendar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/social-welfare.html">Social Welfare</a>
-            </li>
-            <a class="navbar-brand d-none d-md-block" href="/">
-              <img src="/assets/images/black.png" alt="Local Logan Logo" />
-            </a>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/date-ideas.html" aria-current="page">Date Ideas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/local-only-businesses.html">Local-only<br>Businesses</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- --------------------------- ⬆ - Nav Bar - ⬆ --------------------------- -->
-  <!-- ------------------------ ⬇ - Main Content - ⬇ ------------------------- -->
   <main class="container">
     <h1 class="text-center">Local Date Ideas</h1>
     <p class="cow"><i class="fa-solid fa-cow"></i> = Utah State University Activity</p>
-
+    
     <ul id="ideas">
       <li>Play magic, dnd, and other card / board games at <a href="https://gglogan.com" target="_blank">Game Grid</a></li>
       <li>Make charcuterie board and watch sunrise/sunset at <a href="https://intermountainhealthcare.org/services/wellness-preventive-medicine/live-well/move-well/healthy-hikes/find-a-hike/hyrum-gibbons/">Hyrum Gibbon Mt. Logan Park</a></li>
@@ -77,6 +16,7 @@
       <li>Jazz night (live music, food, dancing) at <a href="https://www.elitehall.org">Elite Hall</a> in Hyrum</li>
       <li>Learn to Ski / Snowboard at Beaver Mountain - <a href="https://www.skithebeav.com/lessons-and-rentals/beginner-lessons/">Learn-To-Turn</a></li>
       <li>Volunteer to walk dogs / play with cats at <a href="https://cachehumane.org">Cache Humane Society</a></li>
+    
       <li>Weekend brunch at <a href="https://www.hermsinn.com/history">Herm's Inn</a> if there is a wait, take a walk to first dam</li>
       <li>Get a drink from local coffee shops<br>- <a href="https://www.thewestsidecoffeecompany.com">Westside</a><br>- <a href="https://www.caffeibis.com">Cafe Ibis</a></li>
       <li>Walk the <a href="https://www.alltrails.com/trail/us/utah/logan-river-trail">Logan River Trail</a>. You can make a loop with the <a href="https://www.alltrails.com/trail/us/utah/highline-trail--2">Highland Trail</a>. (~3.5 mi) Climb at Elevation</li>
@@ -114,7 +54,7 @@
       <li>Attend a sporting event at Utah State University</li>
       <li>Go on a <a href="https://www.geocaching.com/play">geocaching</a> adventure</li>
       <li>Attend a rodeo at the <a href="https://www.cachecounty.org/fairgrounds/">fairgrounds</a></li>
-      <li>Golfing at <a href=https://www.logancountryclub.com">Logan Golf and Country Club</a></li>
+      <li>Golfing at <a href="https://www.logancountryclub.com">Logan Golf and Country Club</a></li>
       <li>Snowshoe <a href="https://www.alltrails.com/trail/us/utah/green-canyon">Green Canyon</a></li>
       <li>Axe throwing, bowling, arcade, rollarblading at <a href="https://cachevalleyfunpark.com">Fun Park</a></li>
       <li><i class="fa-solid fa-cow"></i> sk80’s at <a href="https://cachevalleyfunpark.com">Fun Park</a></li>
@@ -161,45 +101,8 @@
       <li>Take a tour of <a href="https://thechocolatefactorywi.com">The Chocolate Factory</a> on Campus</li>
     </ul>
   </main>
-  <!-- ------------------------ ⬆ - Main Content - ⬆ ------------------------- -->
-  <!-- --------------------------- ⬇ - Footer - ⬇ ---------------------------- -->
-  <hr>
-  <div class="container">
-    <footer class="py-3 mb-4">
-      <ul class="nav justify-content-between align-items-center pb-0 mb-0">
-        <li class="nav-item"><a href="/pages/contact-us.html" class="nav-link px-2 text-muted">Contact Us</a></li>
-        <div>
-          <a href="/"><img src="/assets/images/black.png" alt="" class="d-none d-lg-block" width="70px"
-              height="auto"></a>
-        </div>
-        <li class="nav-item"><a href="/pages/creators.html" class="nav-link px-2 text-muted">Creators</a></li>
-      </ul>
-    </footer>
-  </div>
-  <!-- --------------------------- ⬆ - Footer - ⬆ ---------------------------- -->
+
+</Layout>
 
 
-
-  <!-- <script>
-    // ------------ Script That Makes the <li>'s in random order ------------- //
-    // Global Variables
-    var grd = $('#ideas');
-    var imgs = grd.children();
-    // Page Refresh to run script below
-    imgs.sort(function () {
-      return (Math.round(Math.random()) - 0.5);
-    });
-    grd.remove('li');
-    for (var i = 0; i < imgs.length; i++)grd.append(imgs[i]);
-    //Click Functions to run the same script on top
-    $('a.btn-default').click(function () {
-      imgs.sort(function () {
-        return (Math.round(Math.random()) - 0.5);
-      });
-      grd.remove('li');
-      for (var i = 0; i < imgs.length; i++)grd.append(imgs[i]);
-    });
-  </script> -->
-</body>
-
-</html>
+  <style></style>

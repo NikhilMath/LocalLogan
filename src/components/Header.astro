@@ -1,11 +1,9 @@
 ---
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+export interface Props {}
 
-const { href, title, body }  = Astro.props;
+const {}  = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
 
 <nav class="navbar navbar-expand-md navbar-light">
@@ -27,25 +25,24 @@ const { href, title, body }  = Astro.props;
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mx-auto">
 				<li class="nav-item">
-					<a class="nav-link" aria-current="page" href="/"
-						>Event Calendar</a
-					>
+					<a class="nav-link" aria-current={currentPath === "" ? "page" : false} href="/">Event Calendar</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Social Welfare</a>
+					<a class="nav-link" aria-current={currentPath === "social-welfare" ? "page" : false} href="/social-welfare">Social Welfare</a>
 				</li>
 				<a class="navbar-brand d-none d-md-block" href="#">
 					<img src="/assets/images/black.png" alt="" />
 				</a>
 				<li class="nav-item">
-					<a class="nav-link" href="/pages/date-ideas.html">Date Ideas</a>
+					<a class="nav-link" aria-current={currentPath === "date-ideas" ? "page" : false} href="/date-ideas">Date Ideas</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link">Contact</a>
+					<a class="nav-link" aria-current={currentPath === "contact-us" ? "page" : false} href="/contact-us">Contact</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
+
 <style>
 </style>
