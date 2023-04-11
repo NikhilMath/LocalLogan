@@ -1,0 +1,39 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body }  = Astro.props;
+---
+
+<div class="container">
+	<footer class="py-3 mb-4">
+		<ul class="nav justify-content-between align-items-center pb-0 mb-0">
+			<li class="nav-item">
+				<a href="/pages/contact-us.html" class="nav-link px-2 text-muted"
+					>Contact Us</a
+				>
+			</li>
+			<div>
+				<a href="/"
+					><img
+						src="/assets/images/black.png"
+						alt=""
+						class="d-none d-lg-block"
+						width="70px"
+						height="auto"
+				/></a>
+			</div>
+			<li class="nav-item">
+				<a href="/pages/creators.html" class="nav-link px-2 text-muted"
+					>Creators</a
+				>
+			</li>
+		</ul>
+	</footer>
+</div>
+
+<style>
+</style>
