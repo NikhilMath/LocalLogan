@@ -6,10 +6,10 @@ const allFileContents = fs.readFileSync(file, "utf-8");
 
 const lines = allFileContents.split(/\r?\n/);
 
-const items = []
+const items = [];
 
-let newItem = {date:, title, time:, location:, address}
-id:, title:,  dates: [{startDate, endDate}] , location: {name:, latitutde:, longitude:, address:} // maybe just need address
+// let newItem = {date:, title, time:, location:, address}
+// id:, title:,  dates: [{startDate, endDate}] , location: {name:, latitutde:, longitude:, address:} // maybe just need address
 // https://www.explorelogan.com/calendar.html
 // 31
 // MAR
@@ -21,7 +21,5 @@ for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
 
   if (i % 6 == 0) {
-
   }
-  
 }
