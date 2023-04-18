@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<script is:inline async src="https://js.stripe.com/v3/pricing-table.js"
+></script>;
+
+<Layout title="Contact Us">
+  <main class="container" style="margin:auto;">
+    <stripe-pricing-table
+      pricing-table-id="prctbl_1MwHdAC8azeTW5hkJVqKAVVT"
+      publishable-key="pk_live_51MwGtAC8azeTW5hkiard1Ro8M1DbddEXT8MPj6VkZceyfxnQdjXjECSNXf1IiPVHMooVmHnkZZGf5j3NZF4C4hst00B1KTvzes"
+    >
+    </stripe-pricing-table>
+    <br />
+    <div style="text-align: center; font-size: smaller;">
+      Returning customer? <a
+        href="https://billing.stripe.com/p/login/14kcQr0XQ9Dzc8w6oo"
+        >Click Here</a
+      > to manage your account details.
+    </div>
+  </main>
+</Layout>
+
+<style></style>
