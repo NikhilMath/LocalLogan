@@ -1,0 +1,20 @@
+---
+export interface Props {
+  link: string;
+  title: string;
+}
+
+const { link, title } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+---
+
+<li class="nav-item">
+  <a
+    class="nav-link"
+    aria-current={currentPath === link ? "page" : false}
+    href={`/${link}`}
+  >
+    {title}
+  </a>
+</li>
